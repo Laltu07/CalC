@@ -1,64 +1,198 @@
-
-html, body{
- background:linear-gradient(135deg, #1d2b64, #f8cdda);
-    height: 100%;
-    width: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+
+/* Calculator */
+
+.calculator {
+    width: 350px;
+    padding: 20px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Header */
+
+.calculator-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.mini-title {
+    font-size: 11px;
+    color: #777;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.calculator-header h1 {
+    font-size: 22px;
+    color: #222;
+}
+
+
+/* Display */
+
+.display-box {
+    margin-bottom: 15px;
+}
+
+.input {
+    width: 100%;
+    height: 70px;
+
+    padding: 10px 15px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    background: #f8f8f8;
+
+    outline: none;
+
+    font-size: 30px;
+    text-align: right;
+    color: #222;
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+
+/* Normal button */
 
 .button {
-    width: 66px;
-    padding: 20px; 
-    margin: 0 3px;
-    border: 2px solid black;
-    border-radius: 9px;
+    height: 55px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #eeeeee;
+
+    color: #222;
+
+    font-size: 18px;
+    font-weight: 600;
+
     cursor: pointer;
-     transition: all 0.25s ease;
-     position: relative;
-     overflow: hidden;
+
+    transition: 0.15s;
 }
 
-.button:hover{
-    transform: scale(1.05);
-    background: pink;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4), 0 0 10px rgba(255, 255, 255, 0.1);
-
+.button:hover {
+    background: #dddddd;
 }
 
-.button:active{
+.button:active {
     transform: scale(0.95);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
-button::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  background: rgba(255,255,255,0.3);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  transition: width 0.4s ease, height 0.4s ease, opacity 0.6s;
+
+/* Special */
+
+.special {
+    background: #ffe5e5;
+    color: #d11a2a;
 }
 
-.button:active::after {
-  width: 200px;
-  height: 200px;
-  opacity: 1;
-  transition: 0s;
+.special:hover {
+    background: #ffd2d2;
 }
- 
- .row{
-    margin: 8px 0;
 
- }
 
- .row input {
-    font-size: 20px;
-    margin: 0;
-    padding: 10px 0px;
-    border: 2px solid black;
-    border-radius: 4px;
- }
+/* Memory */
+
+.memory {
+    background: #e8eefc;
+    color: #3155a6;
+}
+
+.memory:hover {
+    background: #d8e2fa;
+}
+
+
+/* Operators */
+
+.operator {
+    background: #e4e4e4;
+    color: #333;
+    font-size: 21px;
+}
+
+.operator:hover {
+    background: #d5d5d5;
+}
+
+
+/* Equal */
+
+.equal {
+    background: #333;
+    color: white;
+}
+
+.equal:hover {
+    background: #222;
+}
+
+
+/* Footer */
+
+.calculator-footer {
+    margin-top: 18px;
+
+    text-align: center;
+
+    font-size: 11px;
+    color: #888;
+}
+
+
+/* Mobile */
+
+@media (max-width: 400px) {
+
+    .calculator {
+        width: 92%;
+        padding: 16px;
+    }
+
+    .button {
+        height: 52px;
+    }
+
+    .input {
+        font-size: 26px;
+    }
+}

@@ -1,25 +1,78 @@
-let string="";
- let buttons =document.querySelectorAll('.button');
- Array.from(buttons).forEach((button)=>{
-    button.addEventListener('click',(e)=>{
-        if(e.target.innerHTML == '='){
+let string = "";
+let memory = 0;
+
+let buttons = document.querySelectorAll(".button");
+
+Array.from(buttons).forEach((button) => {
+button.addEventListener("click", (e) => {
+
+    let value = e.target.innerHTML.trim();
+
+    // Equal
+    if (value === "=") {
+
+        try {
             string = eval(string);
-            document.querySelector('.input').value= string;
-        }
-        else if(e.target.innerHTML == 'AC'){
+
+            document.querySelector(".input").value = string;
+
+        } catch (error) {
+
+            document.querySelector(".input").value = "Error";
+
             string = "";
-            document.querySelector('.input').value= string;
         }
-        else if (e.target.innerHTML === "M+"){
-            memory += Number(string || 0);// Handle M+ functionality
+    }
+
+    // All Clear
+    else if (value === "AC") {
+
+        string = "";
+
+        document.querySelector(".input").value = string;
+    }
+
+    // Percentage
+    else if (value === "%") {
+
+        try {
+
+            string = eval(string) / 100;
+
+            document.querySelector(".input").value = string;
+
+        } catch (error) {
+
+            document.querySelector(".input").value = "Error";
+
+            string = "";
         }
-        else if (e.target.innerHTML === "M-"){
-            memory -= Number(string || 0);// Handle M- functionality
-        }
-        else{
-        console.log(e.target)
-        string = string + e. target .innerHTML;
-        document.querySelector('.input').value= string;
-        }
-    });
- });
+    }
+
+    // Memory Add
+    else if (value === "M+") {
+
+        memory += Number(string || 0);
+
+        document.querySelector(".input").value = memory;
+    }
+
+    // Memory Minus
+    else if (value === "M-") {
+
+        memory -= Number(string || 0);
+
+        document.querySelector(".input").value = memory;
+    }
+
+    // Normal buttons
+    else {
+
+        string = string + value;
+
+        document.querySelector(".input").value = string;
+    }
+
+});
+
+});

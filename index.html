@@ -1,48 +1,188 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utils.css">
+
+
+<title>Laltu's Calculator</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="utils.css">
+
+
 </head>
+
 <body>
-    <h1 class="text-center">Laltu's Calculator</h1>
-    <div class="container flex flex-col items-center  mx-auto m-w-20">
-        <div class="row">
-            <input class="input" type="text"/>
+
+
+<main class="calculator-wrapper">
+
+    <div class="calculator">
+
+        <!-- Header -->
+        <div class="calculator-header">
+
+            <div>
+                <p class="mini-title">SIMPLE CALCULATOR</p>
+                <h1>Laltu's Calculator</h1>
+            </div>
+
+            <div class="calculator-icon">
+                ⌗
+            </div>
+
         </div>
-        <div class="row">
-            <button class="button">AC</button>
-            <button class="button">%</button>
-             <button class="button">M=</button>
-             <button class="button">M-</button>
-    </div>  
-    <div class="row">
-            <button class="button">7</button>
-            <button class="button">8</button>
-             <button class="button">9</button>
-             <button class="button">*</button>
+
+
+        <!-- Display -->
+        <div class="display-box">
+
+            <input
+                class="input"
+                type="text"
+                placeholder="0"
+                readonly
+            >
+
+        </div>
+
+
+        <!-- Calculator Buttons -->
+        <div class="buttons">
+
+            <!-- Row 1 -->
+            <div class="row">
+
+                <button class="button special">
+                    AC
+                </button>
+
+                <button class="button special">
+                    %
+                </button>
+
+                <button class="button memory">
+                    M=
+                </button>
+
+                <button class="button memory">
+                    M-
+                </button>
+
+            </div>
+
+
+            <!-- Row 2 -->
+            <div class="row">
+
+                <button class="button">
+                    7
+                </button>
+
+                <button class="button">
+                    8
+                </button>
+
+                <button class="button">
+                    9
+                </button>
+
+                <button class="button operator">
+                    *
+                </button>
+
+            </div>
+
+
+            <!-- Row 3 -->
+            <div class="row">
+
+                <button class="button">
+                    4
+                </button>
+
+                <button class="button">
+                    5
+                </button>
+
+                <button class="button">
+                    6
+                </button>
+
+                <button class="button operator">
+                    /
+                </button>
+
+            </div>
+
+
+            <!-- Row 4 -->
+            <div class="row">
+
+                <button class="button">
+                    1
+                </button>
+
+                <button class="button">
+                    2
+                </button>
+
+                <button class="button">
+                    3
+                </button>
+
+                <button class="button operator">
+                    +
+                </button>
+
+            </div>
+
+
+            <!-- Row 5 -->
+            <div class="row">
+
+                <button class="button zero">
+                    0
+                </button>
+
+                <button class="button">
+                    .
+                </button>
+
+                <button class="button equal">
+                    =
+                </button>
+
+                <button class="button operator">
+                    -
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer -->
+        <div class="calculator-footer">
+
+            <span>
+                Made by Laltu
+            </span>
+
+        </div>
+
     </div>
-    <div class="row">
-            <button class="button">4</button>
-            <button class="button">5</button>
-             <button class="button">6</button>
-             <button class="button">/</button>
-    </div>
-    <div class="row">
-            <button class="button">1</button>
-            <button class="button">2</button>
-             <button class="button">3</button>
-             <button class="button">+</button>
-    </div>  
-    <div class="row">
-            <button class="button">0</button>
-            <button class="button">.</button>
-             <button class="button">=</button>
-             <button class="button">-</button> 
-    </div>          
-    <script src="script.js"></script>
+
+</main>
+
+
+<script src="script.js"></script>
+
+
 </body>
+
 </html>
+

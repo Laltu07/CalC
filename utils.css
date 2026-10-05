@@ -1,21 +1,23 @@
 .text-center {
-    text-align: center;
-}
-.bg-red{
-    background-color: red;
-}
-.mx-auto{
-    margin : auto;
+text-align: center;
 }
 
-.flex{
-    display: flex;
+.bg-red {
+background-color: red;
 }
 
-.flex-col{
-    flex-direction: column;
+.mx-auto {
+margin: auto;
 }
 
-.items-center{
-    align-items: center;
+.flex {
+display: flex;
+}
+
+.flex-col {
+flex-direction: column;
+}
+
+.items-center {
+align-items: center;
 }
